@@ -13,6 +13,7 @@ This project demonstrates server-side programming concepts, MVC architecture, an
 - 💾 MySQL database integration
 - 🛒 Cart and order management
 - 🎨 Responsive UI using HTML, CSS, JavaScript
+- 👨🏻‍💻 Multiple User Roles
 
 ---
 
