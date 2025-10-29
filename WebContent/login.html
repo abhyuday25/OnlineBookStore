@@ -1,66 +1,185 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Book Store</title>
-<link rel="apple-touch-icon" sizes="180x180"
-	href="./favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="./favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16"
-	href="./favicons/favicon-16x16.png">
-<link rel="manifest" href="./favicons/site.webmanifest">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" >
-<link rel="stylesheet" href="styles.css">
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Online Book Store</title>
 
-</head>
-<body onload="funload()">
-	<header>
-		<nav class="navbar navbar-expand-sm bg-dark">
-				<a class="navbar-brand">
-					<!-- The below line can be an image or a h1, either will work -->
-					<img src="logo.png" alt="Google logo" width="60" height="30px">
-				</a>
-				
-				<button style="background-color:white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				 </button>
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+	<link rel="manifest" href="./favicons/site.webmanifest">
 
-                <div class="collapse navbar-collapse" id="navbarNav">                
-				<ul class="navbar-nav" >
-					<li class="nav-item"><span><a class="nav-link" href="index.html">Home</a></span></li>
-					<li class="nav-item "><span><a class="nav-link active" href="login.html">Login</a></span></li>
-					<li class="nav-item "><span><a class="nav-link" href="CustomerRegister.html">Register</a></span></li>
-				</ul>
-				</div>
-			</nav>
-	</header>
-	<div id="topmid"><h1>Welcome to Online Book Store</h1></div>
-	<br>
-	<table class="tab">
-		<tr style="background-color: white; color: green; border-radius: 25%">
-			<td>Login or SignUp Below</td>
-		</tr>
-		<tr>
-			<td><a href="SellerLogin.html">Login As Admin</a></td>
-		</tr>
-	
-		<tr>
-			<td><a href="CustomerLogin.html"> Login As<span> Customer</span></a></td>
-		</tr>
-		<tr>
-			<td><a href="CustomerRegister.html">New user ! Register Here</a></td>
-		</tr>
-	</table>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"></script>
-	<script>
-		// Preloder script
-		var tmp = document.getElementById("loding");
-		function funload() {
-		  loding.style.display = "none";
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="styles.css">
+
+	<style>
+		/* --- Base reset --- */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
 		}
-	  </script>
 
+		body {
+			font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+			color: #333;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* --- Navbar --- */
+		.navbar {
+			background-color: rgba(0, 0, 0, 0.85) !important;
+			padding: 0.8rem 2rem;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.navbar-brand img {
+			height: 40px;
+		}
+
+		.navbar-nav .nav-link {
+			color: #eee !important;
+			font-weight: 500;
+			transition: color 0.3s ease;
+		}
+
+		.navbar-nav .nav-link:hover,
+		.navbar-nav .nav-link.active {
+			color: #ffff80 !important;
+			text-decoration: underline;
+		}
+
+		/* --- Hero Section --- */
+		#topmid {
+			text-align: center;
+			color: #fff;
+			margin-top: 70px;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+		}
+
+		#topmid h1 {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+
+		/* --- Login Options Card --- */
+		.login-container {
+			background: rgba(255, 255, 255, 0.95);
+			width: 90%;
+			max-width: 500px;
+			margin: 40px auto;
+			border-radius: 12px;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+			padding: 30px;
+			text-align: center;
+			backdrop-filter: blur(4px);
+		}
+
+		.login-container h2 {
+			color: #28a745;
+			margin-bottom: 1rem;
+			font-weight: 600;
+		}
+
+		.login-container a {
+			display: block;
+			background: #007bff;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 8px;
+			padding: 12px 0;
+			margin: 10px 0;
+			transition: background 0.3s ease;
+		}
+
+		.login-container a:hover {
+			background: #0056b3;
+		}
+
+		.login-container a:last-child {
+			background: #28a745;
+		}
+
+		.login-container a:last-child:hover {
+			background: #1c7c33;
+		}
+
+		footer {
+			text-align: center;
+			color: #ddd;
+			margin-top: auto;
+			padding: 20px 0;
+			background: rgba(0, 0, 0, 0.8);
+			font-size: 0.9rem;
+		}
+
+		@media (max-width: 576px) {
+			#topmid h1 {
+				font-size: 1.6rem;
+			}
+		}
+	</style>
+</head>
+
+<body onload="funload()">
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark">
+			<a class="navbar-brand" href="index.html">
+				<img src="logo.png" alt="Book Store Logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="CustomerRegister.html">Register</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Hero Section -->
+	<section id="topmid">
+		<h1>Welcome to Online Book Store</h1>
+	</section>
+
+	<!-- Login / Register Section -->
+	<section class="login-container">
+		<h2>Login or Sign Up Below</h2>
+		<a href="SellerLogin.html">Login as Admin</a>
+		<a href="CustomerLogin.html">Login as Customer</a>
+		<a href="CustomerRegister.html">New User? Register Here</a>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		&copy; 2025 Online Book Store | All Rights Reserved
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"></script>
+
+	<script>
+		// Preloader
+		function funload() {
+			const loding = document.getElementById("loding");
+			if (loding) loding.style.display = "none";
+		}
+	</script>
 </body>
+
 </html>

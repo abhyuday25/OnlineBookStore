@@ -67,22 +67,19 @@ public class AddBookServlet extends HttpServlet {
     }
     
     private static void showAddBookForm(PrintWriter pw) {
-        String form = "<table class=\"tab my-5\" style=\"width:40%;\">\r\n"
+        String form = "<table class=\"tab my-8\" style=\"width:90%; margin:auto; font-size:1.2rem;\">\r\n"
                 + "        <tr>\r\n"
-                + "            <td>\r\n"
+                + "            <td style=\"padding:25px;\">\r\n"
                 + "                <form action=\"addbook\" method=\"post\">\r\n"
                 + "                    <!-- <label for=\"bookCode\">Book Code : </label><input type=\"text\" name=\"barcode\" id=\"bookCode\" placeholder=\"Enter Book Code\" required><br/> -->\r\n"
-                + "                    <label for=\"bookName\">Book Name : </label> <input type=\"text\" name=\"name\" id=\"bookName\" placeholder=\"Enter Book's name\" required><br/>\r\n"
-                + "                    <label for=\"bookAuthor\">Book Author : </label><input type=\"text\" name=\"author\" id=\"bookAuthor\" placeholder=\"Enter Author's Name\" required><br/>\r\n"
-                + "                    <label for=\"bookPrice\">Book Price : </label><input type=\"number\" name=\"price\" placeholder=\"Enter the Price\" required><br/>\r\n"
-                + "                    <label for=\"bookQuantity\">Book Qnty : </label><input type=\"number\" name=\"quantity\" id=\"bookQuantity\" placeholder=\"Enter the quantity\" required><br/>\r\n"
-                + "                    <input class=\"btn btn-success my-2\" type=\"submit\" value=\" Add Book \">\r\n"
+                + "                    <label for=\"bookName\">Book Name : </label> <input type=\"text\" name=\"name\" id=\"bookName\" placeholder=\"Enter Book's name\" style=\"width:80%; padding:8px;\" required><br/><br/>\r\n"
+                + "                    <label for=\"bookAuthor\">Book Author : </label><input type=\"text\" name=\"author\" id=\"bookAuthor\" placeholder=\"Enter Author's Name\" style=\"width:80%; padding:8px;\" required><br/><br/>\r\n"
+                + "                    <label for=\"bookPrice\">Book Price : </label><input type=\"number\" name=\"price\" placeholder=\"Enter the Price\" style=\"width:80%; padding:8px;\" required><br/><br/>\r\n"
+                + "                    <label for=\"bookQuantity\">Book Qnty : </label><input type=\"number\" name=\"quantity\" id=\"bookQuantity\" placeholder=\"Enter the quantity\" style=\"width:80%; padding:8px;\" required><br/><br/>\r\n"
+                + "                    <input class=\"btn btn-success my-2\" type=\"submit\" value=\" Add Book \" style=\"padding:10px 20px; font-size:1rem;\">\r\n"
                 + "                </form>\r\n"
                 + "            </td>\r\n"
                 + "        </tr>  \r\n"
-                + "        <!-- <tr>\r\n"
-                + "            <td><a href=\"index.html\">Go Back To Home Page</a></td>\r\n"
-                + "        </tr> -->\r\n"
                 + "    </table>";
         pw.println(form);
     }

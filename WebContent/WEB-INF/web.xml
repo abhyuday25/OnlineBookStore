@@ -141,7 +141,7 @@
 		<error-code>405</error-code>
 		<location>/error</location>
 	</error-page>
-	
+
 	<!-- exception-type related error pages -->
 	<error-page>
 		<exception-type>

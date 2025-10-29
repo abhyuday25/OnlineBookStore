@@ -43,7 +43,7 @@ public class AboutServlet extends HttpServlet {
     // A method to print the team section with modern CSS
     private void printTeamInfo(PrintWriter pw) {
         pw.println("<style>");
-        pw.println("body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #e3f2fd, #e1bee7); margin: 0; padding: 0; }");
+        pw.println("body { font-family: 'Poppins', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%); margin: 0; padding: 0; }");
         pw.println(".team-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 80vh; }");
         pw.println(".team-card { background: rgba(255,255,255,0.25); backdrop-filter: blur(10px); border-radius: 16px; padding: 30px 50px; "
                 + "box-shadow: 0 8px 32px rgba(0,0,0,0.15); text-align: center; width: 60%; max-width: 500px; transition: transform 0.3s ease, box-shadow 0.3s ease; }");
