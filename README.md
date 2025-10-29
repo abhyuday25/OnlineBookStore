@@ -51,7 +51,7 @@ This project demonstrates server-side programming concepts, MVC architecture, an
  git push
 
 ### 🏠 Home Page
-![Home Page](assests\homepage.jpg)
+![Home Page](https://raw.githubusercontent.com/abhyuday25/OnlineBookStore/main/assests/homepage.jpg)
 
 ### 🔐 Login Page
-![Login Page](assests\login.jpg)
+![Login Page](https://raw.githubusercontent.com/abhyuday25/OnlineBookStore/main/assests/login.jpg)
