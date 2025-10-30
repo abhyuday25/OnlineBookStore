@@ -57,7 +57,7 @@ public class AboutServlet extends HttpServlet {
         pw.println("<div class='team-card'>");
         pw.println("<h2 class='team-title'>Team Members</h2>");
         pw.println("<p class='member'><span>Abhyuday Sinha</span> (23MIC0036)</p>");
-        pw.println("<p class='member'><span>Sammridhi Sharma</span> (23MIC0097)</p>");
+        pw.println("<p class='member'><span>Samriddhi Sharma</span> (23MIC0097)</p>");
         pw.println("</div>");
         pw.println("</div>");
     }
